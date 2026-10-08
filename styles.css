@@ -55,7 +55,6 @@ button { font: inherit; color: inherit; }
 .callout .c { animation: callout .9s ease-out forwards; text-shadow: 0 6px 30px rgba(0,0,0,.6); }
 .callout .c.good { color: var(--paper); }
 .callout .c.grow { color: var(--rose); }
-.callout .c.bad { color: var(--red); font-size: 22px; }
 .callout .c.cash { color: var(--green); font-family: var(--mono); }
 @keyframes callout { 0% { opacity: 0; transform: translateY(10px) scale(.9); } 15% { opacity: 1; transform: translateY(0) scale(1.05); } 70% { opacity: 1; transform: translateY(-10px) scale(1); } 100% { opacity: 0; transform: translateY(-30px); } }
 
