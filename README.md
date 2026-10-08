@@ -2,7 +2,7 @@
 
 Build the tower. One tap, one floor. Real quantities, real prices.
 
-A 3D game for engineers on a break, by [QS Mind](https://qsmind.com). Live at https://play.kareemsafwat.com
+A 3D game for engineers on a break, by [QS Mind](https://qsmind.kareemsafwat.com). Live at https://play.kareemsafwat.com
 
 ## How it plays
 
@@ -36,6 +36,7 @@ src/game/audio.js            synth sounds
 src/game/inspection.js       the price question
 src/data/prices.js           items per market
 src/data/projects.js         levels and brand metals
+src/ui.js                    DOM helpers, money format, share
 src/store.js, src/rng.js     profile and seeded random
 tests/                       node --test
 public/                      Top Out mark, lockup, favicon
