@@ -22,16 +22,3 @@ export function hashString(s) {
 export function pick(rand, arr) {
   return arr[Math.floor(rand() * arr.length)];
 }
-
-export function between(rand, lo, hi) {
-  return lo + rand() * (hi - lo);
-}
-
-export function shuffle(rand, arr) {
-  const a = arr.slice();
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(rand() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
