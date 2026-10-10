@@ -7,6 +7,7 @@ import { load, save, rankFor, dayKey, bumpStreak } from './store.js';
 import { mulberry32, hashString } from './rng.js';
 import { sfx, unlock, setMuted, isMuted } from './game/audio.js';
 import { $, el, money, buzz, share } from './ui.js';
+import { initLeaderboard, submitScore } from './leaderboard.js';
 
 const state = load();
 setMuted(state.muted);
@@ -184,6 +185,7 @@ function gameOver() {
     Object.assign(state, bumpStreak(state, key, dayKey(y)));
   }
   save(state);
+  if (!bot) setTimeout(() => submitScore(floors), 1200);
   const after = rankFor(state.xp);
   const cur = MARKETS[project.market].currency;
   setTimeout(() => {
@@ -318,6 +320,7 @@ $('#btn-help').addEventListener('click', () => { if (mode === 'play') { mode = '
 function syncMute() { $('#btn-mute').textContent = isMuted() ? '🔇' : '🔊'; }
 $('#btn-mute').addEventListener('click', () => { setMuted(!isMuted()); state.muted = isMuted(); save(state); syncMute(); });
 syncMute();
+initLeaderboard();
 document.addEventListener('visibilitychange', () => { if (document.hidden) last = performance.now(); });
 
 window.__sb = { get tower() { return tower; }, get block() { return block; }, get mode() { return mode; }, drop };

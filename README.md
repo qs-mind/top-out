@@ -23,7 +23,18 @@ npm test          # rules tests (node --test)
 npm run dev       # http://localhost:4173
 ```
 
-Deployed on Vercel from `main`.
+Needs Node 20+. The Node server serves the game and the leaderboard API:
+
+```bash
+npm install
+DATABASE_URL=postgres://... PORT=3000 npm start   # http://localhost:3000
+```
+
+Without `DATABASE_URL` the game still runs; the leaderboard shows as unavailable. Create the tables once with `db/schema.sql`. Tables are prefixed `topout_`.
+
+Leaderboard: no login. The game asks once for first name, last name and email (kept in the browser). Email is stored in the database only and is never sent back. Score = floors built.
+
+Hosting is moving to Openship at https://play.qsmind.app (the old Vercel host is play.kareemsafwat.com).
 
 ## Layout
 
@@ -37,6 +48,9 @@ src/game/inspection.js       the price question
 src/data/prices.js           items per market
 src/data/projects.js         levels and brand metals
 src/store.js, src/rng.js     profile and seeded random
+src/leaderboard.js           side panel and one-time player form
+server/                      Node server, API logic, Postgres store
+db/schema.sql                leaderboard tables
 tests/                       node --test
 public/                      Top Out mark, lockup, favicon
 ```

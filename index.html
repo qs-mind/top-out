@@ -110,6 +110,31 @@
     </div>
   </div>
 
+  <!-- Leaderboard (side panel) -->
+  <button class="lb-tab" id="lb-tab" type="button" aria-expanded="false" aria-controls="lb">Top 50</button>
+  <aside class="lb" id="lb" aria-label="Leaderboard">
+    <div class="lb-head"><b>Leaderboard</b><button class="icon" id="lb-close" type="button" aria-label="Close">×</button></div>
+    <small class="muted">Best floors per player</small>
+    <ol id="lb-list"></ol>
+  </aside>
+
+  <!-- One-time player form -->
+  <form class="overlay pform" id="player-form" hidden>
+    <div class="sheet">
+      <p class="chip">Save your score</p>
+      <h2>Join the leaderboard</h2>
+      <p class="muted small">Asked once. Your name shows on the board. Your email stays private and is never shown.</p>
+      <input name="first" placeholder="First name" maxlength="40" autocomplete="given-name" required />
+      <input name="last" placeholder="Last name" maxlength="40" autocomplete="family-name" required />
+      <input name="email" type="email" placeholder="Email" maxlength="120" autocomplete="email" required />
+      <p class="pf-msg" id="pf-msg" role="alert"></p>
+      <div class="btn-row">
+        <button class="btn primary big" type="submit">Save score</button>
+        <button class="btn ghost" id="pf-skip" type="button">Not now</button>
+      </div>
+    </div>
+  </form>
+
   <script type="module" src="/src/app.js"></script>
 </body>
 </html>

@@ -6,6 +6,10 @@
   "description": "Build the tower. One tap, one floor. A 3D game for engineers on a break.",
   "scripts": {
     "test": "node --test tests/*.test.js",
-    "dev": "npx -y serve -l 4173 ."
+    "dev": "npx -y serve -l 4173 .",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "postgres": "^3.4.5"
   }
 }

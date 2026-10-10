@@ -143,3 +143,16 @@ button { font: inherit; color: inherit; }
   .callout { font-size: 24px; }
 }
 @media (prefers-reduced-motion: reduce) { .taphint { animation: none; } }
+
+/* Leaderboard: slide-in side panel, closed by default so it never blocks play */
+.lb-tab { position: fixed; right: 0; top: 50%; z-index: 20; transform: translateY(-50%); padding: 10px 12px; border-radius: 12px 0 0 12px; border: 1px solid var(--line-strong); border-right: 0; background: rgba(14,15,18,.7); backdrop-filter: blur(6px); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+.lb { position: fixed; top: 0; right: 0; bottom: 0; z-index: 21; width: min(320px, 86vw); padding: max(16px, env(safe-area-inset-top)) 16px 16px; background: var(--sheet); border-left: 1px solid var(--line-strong); backdrop-filter: blur(10px); transform: translateX(105%); transition: transform .25s ease; overflow-y: auto; visibility: hidden; }
+.lb.open { transform: none; visibility: visible; }
+.lb-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; font-size: 18px; }
+.lb ol { list-style: none; margin: 12px 0 0; padding: 0; }
+.lb li { display: grid; grid-template-columns: 28px 1fr auto; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.lb li:nth-child(-n+3) > span:first-child { color: var(--rose); }
+.lb-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pform { z-index: 30; background: rgba(14,15,18,.7); user-select: text; -webkit-user-select: text; }
+.pform input { width: 100%; margin-top: 10px; padding: 14px; border-radius: 14px; border: 1px solid var(--line-strong); background: rgba(14,15,18,.8); color: var(--paper); font: inherit; font-size: 16px; }
+.pf-msg { min-height: 18px; margin-top: 8px !important; color: var(--red); font-size: 13px; }
