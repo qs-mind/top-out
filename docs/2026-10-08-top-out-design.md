@@ -34,7 +34,7 @@ Top Out is a QS Mind product in the brand system: the geodesic sphere with its o
 
 ## Build
 
-Static files, no build step, Vercel from `main` of `kareem-sf/top-out`, at play.kareemsafwat.com.
+Static files, no build step, OpenShip from `main` of `qs-mind/top-out`, at play.qsmind.app.
 
 ```
 index.html, styles.css        full-screen canvas with HTML overlays

@@ -2,7 +2,7 @@
 
 Build the tower. One tap, one floor. Real quantities, real prices.
 
-A 3D game for engineers on a break, by [QS Mind](https://qsmind.com). Live at https://play.kareemsafwat.com
+A 3D game for engineers on a break, by [QS Mind](https://qsmind.app). Live at https://play.qsmind.app
 
 ## How it plays
 

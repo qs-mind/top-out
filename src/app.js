@@ -203,7 +203,7 @@ function shareText() {
   const floors = floorsBuilt(tower);
   const cur = MARKETS[project.market].currency;
   const head = daily ? `Top Out Daily #${dailyNumber()}` : `Top Out · ${project.name}, ${project.city}`;
-  return `${head}\n🏗️ ${floors} floors · ${cur} ${compact(Math.round(tower.boq.value))} contract value\nhttps://play.kareemsafwat.com`;
+  return `${head}\n🏗️ ${floors} floors · ${cur} ${compact(Math.round(tower.boq.value))} contract value\nhttps://play.qsmind.app`;
 }
 
 // ---------- title ----------
